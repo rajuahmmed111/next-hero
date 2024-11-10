@@ -22,6 +22,10 @@ const Navbar = () => {
       title: "Service",
       path: "/services",
     },
+    {
+      title: "Blog",
+      path: "/blog",
+    },
   ];
 
   const handleOnClick = () => {
