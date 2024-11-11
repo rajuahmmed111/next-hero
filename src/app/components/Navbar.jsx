@@ -26,11 +26,20 @@ const Navbar = () => {
       title: "Blog",
       path: "/blog",
     },
+    {
+      title: "Categories",
+      path: "/categories",
+    },
   ];
 
   const handleOnClick = () => {
     router.push("/about")
   };
+
+  if(pathName.includes('dashboard')) {
+    return (
+      <nav className="flex justify-between items-center bg-cyan-800 py-6 md:px-20"></nav>)
+  }
 
   return (
     <div>
@@ -40,14 +49,14 @@ const Navbar = () => {
             Next <span className="text-cyan-800">Hero</span>
           </h1>
         </Link>
-        <ul className="flex justify-center  items-center gap-8">
+        <ul className="flex justify-center  items-center gap-4">
           {links?.map((link) => (
             // eslint-disable-next-line react/jsx-key
             <li className="text-xl font-bold">
               <Link
                 className={`${
                   pathName === link.path
-                    ? "text-cyan-800 bg-gray-300 px-5 py-2 duration-500 rounded-md"
+                    ? "text-cyan-800 bg-gray-300 px-2 py-1 duration-500 rounded-md"
                     : "text-purple-800"
                 }`}
                 key={link.path}
