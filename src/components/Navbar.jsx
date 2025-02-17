@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
-import UserLogo from "../../assets/logo/user_logo.png";
+import { usePathname, useRouter } from "next/navigation";
+import UserLogo from "../assets/logo/user_logo.png";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -29,7 +28,7 @@ const Navbar = () => {
   ];
 
   const handleOnClick = () => {
-    router.push("/about")
+    router.push("/about");
   };
 
   return (

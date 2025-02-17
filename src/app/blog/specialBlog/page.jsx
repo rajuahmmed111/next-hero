@@ -3,7 +3,7 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
-            Special Blog
+            Special Blog and content
         </div>
     );
 };
